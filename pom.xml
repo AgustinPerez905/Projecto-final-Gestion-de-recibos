@@ -76,7 +76,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.gestion_de_recibos.projectofinal/com.gestion_de_recibos.projectofinal.HelloApplication
+                                com.gestion_de_recibos.projectofinal/com.gestion_de_recibos.projectofinal.App
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

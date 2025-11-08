@@ -4,6 +4,7 @@ module com.gestion_de_recibos.projectofinal {
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
+    requires java.sql;
 
     opens com.gestion_de_recibos.projectofinal to javafx.fxml;
     exports com.gestion_de_recibos.projectofinal;
