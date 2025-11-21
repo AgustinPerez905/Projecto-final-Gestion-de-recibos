@@ -1,17 +1,35 @@
 package manager;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class ConexionManager {
-    private static final String url = "jdbc:mariadb://localhost:3306/gestionRecibos";
-    private static final String usuario = "root";
-    private static final String contraseña = "pass123";
+
     private static ConexionManager instance;
     private Connection conexion;
 
     private ConexionManager() {
+    }
+
+    public Properties getpropiedades() {
+        try (InputStream input = ConexionManager.class.getClassLoader().getResourceAsStream("db.propiedades")) {
+            if (input == null)
+                throw new RuntimeException("falta db.propiedades");
+
+            Properties prop = new Properties();
+            prop.load(input);
+            return prop;
+
+        } catch (IOException b) {
+            b.printStackTrace();
+            return null;
+        }
+
+
     }
 
     public static ConexionManager getInstance() {
@@ -26,7 +44,16 @@ public class ConexionManager {
 
     public Connection initConexion() {
         try {
-            this.conexion = DriverManager.getConnection(url, usuario, contraseña);
+            Properties prop = getpropiedades();
+            if (prop == null)
+                throw new RuntimeException("falta db.propiedades");
+
+
+            String url = prop.getProperty("db.url");
+            String usuario = prop.getProperty("db.usuario");
+            String contrasenia = prop.getProperty("db.contrasenia");
+
+            this.conexion = DriverManager.getConnection(url, usuario, contrasenia);
         } catch (SQLException e) {
             e.printStackTrace();
             this.conexion = null;

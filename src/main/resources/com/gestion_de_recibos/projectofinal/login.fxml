@@ -3,12 +3,38 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="493.0" prefWidth="366.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.gestion_de_recibos.projectofinal.LoginController">
+<VBox alignment="CENTER" prefHeight="493.0" prefWidth="366.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.LoginController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
+   <Label text="login" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="44.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txt_username" promptText="usuario" />
+   <PasswordField fx:id="txt_password" promptText="contraseña" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="btn_ingresarUsuario" mnemonicParsing="false" onAction="#login" text="ingresar usuario">
+            <HBox.margin>
+               <Insets right="20.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="btn_crearUsuario" mnemonicParsing="false" onAction="#abrirCrearUser" text="crear usuario">
+            <HBox.margin>
+               <Insets left="20.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <Label fx:id="lbl_connection" text="conectando a la base de datos...">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
 
     <Label fx:id="welcomeText" />
-    <Button text="Hello!" />
 </VBox>
