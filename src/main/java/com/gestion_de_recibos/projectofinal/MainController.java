@@ -9,5 +9,10 @@ public class MainController {
     private void cargarrecibo () throws IOException {
         App.setRoot("cargarRecibo");
     }
+    @FXML
+    private void verRecibos () throws IOException {
+        App.setRoot("verRecibos");
+    }
+
 
 }

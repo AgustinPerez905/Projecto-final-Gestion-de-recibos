@@ -9,7 +9,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Button mnemonicParsing="false" text="ver recibos" />
+      <Button mnemonicParsing="false" onAction="#verRecibos" text="ver recibos" />
       <Button fx:id="btn_cargarrecibo" mnemonicParsing="false" onAction="#cargarrecibo" text="cargar recibo" />
    </children>
 </VBox>

@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ReciboDAO {
 
@@ -31,6 +34,42 @@ public class ReciboDAO {
 
         rs.close();
         stmt.close();
+    }
+
+    public static List<Recibo> cargarListaRecibos(Connection conn, String idus) throws SQLException {
+        String sql = "select * from Recibos where idUsuario = ?";
+
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        stmt.setString(1, idus);
+
+        ResultSet rs = stmt.executeQuery();
+
+        List<Recibo> listaDeRecibos = new ArrayList<Recibo>();
+
+        while (rs.next()) {
+            Recibo reciboX = new Recibo(
+                    rs.getString("id"),
+                    rs.getDouble("monto"),
+                    rs.getString("descripcion"),
+                    rs.getString("idUsuario"),
+                    rs.getString("tipo"),
+                    LocalDate.parse(rs.getString("fecha")),
+                    LocalDate.parse(rs.getString("fechaVencimiento")),
+                    rs.getString("numRUT"),
+                    rs.getString("moneda"),
+                    rs.getDouble("iVA"),
+                    rs.getDouble("subtotal"),
+                    rs.getString("debitoTarjeta"));
+            listaDeRecibos.add(reciboX);
+
+        }
+
+
+        rs.close();
+        stmt.close();
+
+
+        return listaDeRecibos;
     }
 
 }

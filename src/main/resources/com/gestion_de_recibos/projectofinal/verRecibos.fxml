@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.gestion_de_recibos.projectofinal.VerRecibos"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="tb_recibos" prefHeight="475.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.VerRecibosController">
+   <children>
+      <Button fx:id="btn_cerrar" layoutX="707.0" layoutY="402.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="76.0" text="cerrar" />
+      <Button fx:id="btn_modificarRecibo" layoutX="337.0" layoutY="335.0" mnemonicParsing="false" text="modificar recibo" />
+      <Label layoutX="242.0" layoutY="14.0" text="ver recibos" />
+      <TableView fx:id="tb_tableview" layoutX="6.0" layoutY="36.0" prefHeight="294.0" prefWidth="819.0">
+        <columns>
+          <TableColumn fx:id="tc_monto" text="monto" />
+          <TableColumn fx:id="tc_descripcion" prefWidth="130.0" text="descripcion" />
+            <TableColumn fx:id="tc_tipo" prefWidth="56.0" text="tipo" />
+            <TableColumn fx:id="tc_fecha" prefWidth="56.0" text="fecha" />
+            <TableColumn fx:id="tc_fechaVencimiento" prefWidth="130.0" text="fecha de vencimiento" />
+            <TableColumn fx:id="tc_numeroRut" prefWidth="73.00006103515625" text="numero rut" />
+            <TableColumn fx:id="tc_moneda" prefWidth="54.33331298828125" text="moneda" />
+            <TableColumn fx:id="tc_iva" prefWidth="38.33331298828125" text="iva" />
+            <TableColumn fx:id="tc_subtotal" prefWidth="103.0" text="subtotal" />
+            <TableColumn fx:id="tc_debitoTarjeta" prefWidth="95.0" text="debito tarjeta" />
+        </columns>
+      </TableView>
+   </children>
 </AnchorPane>
