@@ -16,7 +16,7 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-      <Button fx:id="btn_salir" layoutX="36.0" layoutY="339.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="59.0" text="cerrar" />
+      <Button fx:id="btn_salir" layoutX="36.0" layoutY="339.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="38.0" prefWidth="59.0" text="cerrar" />
       <AmbientLight color="CHARTREUSE" layoutX="66.0" layoutY="258.0" lightOn="true" />
       <PointLight color="CHARTREUSE" layoutX="304.0" layoutY="200.0" lightOn="true" />
       <ToggleSwitch disable="true" layoutX="-17.0" layoutY="282.0" opacity="0.0" prefHeight="18.0" prefWidth="1.0" />

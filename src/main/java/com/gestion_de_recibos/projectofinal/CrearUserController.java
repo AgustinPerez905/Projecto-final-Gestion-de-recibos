@@ -54,5 +54,9 @@ public class CrearUserController {
 
 
     }
+    @FXML
+    public static void cerrar () throws IOException {
+        App.setRoot("main");
 
+    }
 }

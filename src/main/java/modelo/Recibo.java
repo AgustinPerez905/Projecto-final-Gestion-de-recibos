@@ -1,5 +1,7 @@
 package modelo;
 
+import java.time.LocalDate;
+import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Recibo {
@@ -13,9 +15,9 @@ public class Recibo {
 
     private String tipo;
 
-    private String fecha;
+    private LocalDate fecha;
 
-    private String fechaVencimiento;
+    private LocalDate fechaVencimiento;
 
     private String numRUT;
 
@@ -31,7 +33,11 @@ public class Recibo {
         return String.valueOf(numero);
     }
 
-    public Recibo(double monto, String descripcion, String idUsuario, String tipo, String fecha, String fechaVencimiento, String numRUT, String moneda, double iVA, double subtotal, String debitoTarjeta) {
+    public Recibo(double monto, String descripcion,
+                  String idUsuario, String tipo,
+                  LocalDate fecha, LocalDate fechaVencimiento,
+                  String numRUT, String moneda, double iVA, double subtotal,
+                  String debitoTarjeta) {
         this.id = getAlphaNumericString();
         this.monto = monto;
         this.descripcion = descripcion;
@@ -46,7 +52,10 @@ public class Recibo {
         this.debitoTarjeta = debitoTarjeta;
     }
 
-    public Recibo(String id, double monto, String descripcion, String idUsuario, String tipo, String fecha, String fechaVencimiento, String numRUT, String moneda, double iVA, double subtotal, String debitoTarjeta) {
+    public Recibo(String id,
+                  double monto, String descripcion, String idUsuario, String tipo,
+                  LocalDate fecha, LocalDate fechaVencimiento, String numRUT, String moneda,
+                  double iVA, double subtotal, String debitoTarjeta) {
         this.id = id;
         this.monto = monto;
         this.descripcion = descripcion;
@@ -81,11 +90,11 @@ public class Recibo {
         return tipo;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public String getFechaVencimiento() {
+    public LocalDate getFechaVencimiento() {
         return fechaVencimiento;
     }
 
