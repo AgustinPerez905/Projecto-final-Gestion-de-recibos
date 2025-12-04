@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<?import org.controlsfx.control.*?>
 
-<AnchorPane prefHeight="422.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.CrearUserController">
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.CrearUserController">
    <children>
-      <TextField fx:id="txt_fullname" layoutX="49.0" layoutY="72.0" prefHeight="26.0" prefWidth="267.0" promptText="nombre completo" />
-      <TextField fx:id="txt_username" layoutX="50.0" layoutY="104.0" prefHeight="26.0" prefWidth="267.0" promptText="usuario" />
-      <TextField fx:id="txt_password" layoutX="49.0" layoutY="137.0" prefHeight="26.0" prefWidth="267.0" promptText="contraseña" />
-      <PasswordField fx:id="txt_repeatPassword" layoutX="49.0" layoutY="172.0" prefHeight="26.0" prefWidth="267.0" promptText="repetir contraseña" />
-      <Button fx:id="btn_crearUser" defaultButton="true" layoutX="177.0" layoutY="259.0" mnemonicParsing="false" onAction="#crearUsuario" prefHeight="71.0" prefWidth="170.0" text="crear usuario">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-      <Button fx:id="btn_salir" layoutX="36.0" layoutY="339.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="38.0" prefWidth="59.0" text="cerrar" />
-      <AmbientLight color="CHARTREUSE" layoutX="66.0" layoutY="258.0" lightOn="true" />
-      <PointLight color="CHARTREUSE" layoutX="304.0" layoutY="200.0" lightOn="true" />
-      <ToggleSwitch disable="true" layoutX="-17.0" layoutY="282.0" opacity="0.0" prefHeight="18.0" prefWidth="1.0" />
-      <Label layoutX="113.0" layoutY="32.0" prefHeight="28.0" prefWidth="121.0" text="Crear Usuario">
+      <Label prefHeight="28.0" prefWidth="121.0" text="Crear Usuario" underline="true">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
+      <TextField fx:id="txt_fullname" prefHeight="26.0" prefWidth="267.0" promptText="nombre completo" />
+      <TextField fx:id="txt_username" prefHeight="26.0" prefWidth="267.0" promptText="usuario" />
+      <TextField fx:id="txt_password" prefHeight="26.0" prefWidth="267.0" promptText="contraseña" />
+      <PasswordField fx:id="txt_repeatPassword" prefHeight="26.0" prefWidth="267.0" promptText="repetir contraseña" />
+      <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="280.0" spacing="20.0">
+         <children>
+            <Button fx:id="btn_salir" mnemonicParsing="false" onAction="#cerrar" prefHeight="38.0" prefWidth="59.0" style="-fx-background-color: #f7dcda;" text="cerrar" />
+            <Button fx:id="btn_crearUser" defaultButton="true" mnemonicParsing="false" onAction="#crearUsuario" prefHeight="38.0" prefWidth="134.0" text="crear usuario">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
    </children>
-</AnchorPane>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

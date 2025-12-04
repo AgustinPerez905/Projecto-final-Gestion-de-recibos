@@ -11,5 +11,6 @@
    <children>
       <Button mnemonicParsing="false" onAction="#verRecibos" text="ver recibos" />
       <Button fx:id="btn_cargarrecibo" mnemonicParsing="false" onAction="#cargarrecibo" text="cargar recibo" />
+      <Button mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesion" />
    </children>
 </VBox>

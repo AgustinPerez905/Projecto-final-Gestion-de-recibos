@@ -1,6 +1,7 @@
 package com.gestion_de_recibos.projectofinal;
 
 import javafx.fxml.FXML;
+import manager.SessionManager;
 
 import java.io.IOException;
 
@@ -14,5 +15,11 @@ public class MainController {
         App.setRoot("verRecibos");
     }
 
+    @FXML
+    private void cerrarSesion() throws IOException {
+        SessionManager.getInstance().cerrarSesion();
+        App.setRoot("login");
+
+    }
 
 }
