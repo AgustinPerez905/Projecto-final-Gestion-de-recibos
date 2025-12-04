@@ -34,6 +34,16 @@ public class Recibo {
     }
 
     public Recibo(double monto, String descripcion,
+                  String tipo,
+                  double subtotal) {
+
+        this.monto = monto;
+        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.subtotal = subtotal;
+
+    }
+    public Recibo(double monto, String descripcion,
                   String idUsuario, String tipo,
                   LocalDate fecha, LocalDate fechaVencimiento,
                   String numRUT, String moneda, double iVA, double subtotal,
@@ -50,6 +60,24 @@ public class Recibo {
         this.iVA = iVA;
         this.subtotal = subtotal;
         this.debitoTarjeta = debitoTarjeta;
+    }
+
+    public void modificarRecibo (double monto, String descripcion,
+                   String tipo,
+                  LocalDate fecha, LocalDate fechaVencimiento,
+                  String numRUT, String moneda, double iVA, double subtotal,
+                  String debitoTarjeta) {
+        this.monto = monto;
+        this.descripcion = descripcion;
+        this.tipo = tipo;
+        this.fecha = fecha;
+        this.fechaVencimiento = fechaVencimiento;
+        this.numRUT = numRUT;
+        this.moneda = moneda;
+        this.iVA = iVA;
+        this.subtotal = subtotal;
+        this.debitoTarjeta = debitoTarjeta;
+
     }
 
     public Recibo(String id,
