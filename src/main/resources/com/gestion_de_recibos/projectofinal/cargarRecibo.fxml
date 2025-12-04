@@ -4,7 +4,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <HBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.CargarReciboController">
    <children>
       <VBox prefHeight="437.0" prefWidth="198.0">
@@ -39,16 +38,16 @@
                   <Label text="IVA:" GridPane.rowIndex="7" />
                   <Label text="subtotal:" GridPane.rowIndex="8" />
                   <Label text="debito tarjeta" GridPane.rowIndex="9" />
-                  <Spinner fx:id="txt_monto" GridPane.columnIndex="1" />
+                  <Spinner fx:id="txt_monto" editable="true" GridPane.columnIndex="1" />
                   <TextField fx:id="txt_descripcion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txt_tipo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <DatePicker fx:id="dp_fecha" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <DatePicker fx:id="dp_fechaVenc" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="dp_fecha" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="dp_fechaVenc" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <TextField fx:id="txt_moneda" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <TextField fx:id="txt_numeroRUT" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <TextField fx:id="txt_debitotarjeta" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                  <Spinner fx:id="txt_IVA" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                  <Spinner fx:id="txt_subtotal" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Spinner fx:id="txt_IVA" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Spinner fx:id="txt_subtotal" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                </children>
             </GridPane>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="318.0">
@@ -62,12 +61,14 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
-      <VBox prefHeight="437.0" prefWidth="218.0">
+      <VBox prefHeight="437.0" prefWidth="298.0">
          <children>
-            <TableView prefHeight="257.0" prefWidth="218.0">
+            <TableView fx:id="tb_tableview" prefHeight="257.0" prefWidth="301.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+                <TableColumn fx:id="tc_monto" prefWidth="58.3333740234375" text="monto" />
+                <TableColumn fx:id="tc_descripcion" prefWidth="111.0" text="descripcion" />
+                  <TableColumn fx:id="tc_tipo" prefWidth="69.0" text="tipo" />
+                  <TableColumn fx:id="tc_subtotal" prefWidth="64.3333740234375" text="subtotal" />
               </columns>
             </TableView>
          </children>
