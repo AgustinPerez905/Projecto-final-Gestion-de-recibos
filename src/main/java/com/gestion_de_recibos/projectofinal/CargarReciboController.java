@@ -138,7 +138,7 @@ public class CargarReciboController {
                 e.printStackTrace();
                 Alert alerta = new Alert(Alert.AlertType.ERROR);
                 alerta.setTitle("Error");
-                alerta.setHeaderText("Se produjo un error");
+                alerta.setHeaderText("tienes que agregar informacion");
                 alerta.setContentText(e.getMessage() != null ? e.getMessage() : e.toString());
                 alerta.showAndWait();
 

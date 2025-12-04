@@ -3,12 +3,16 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <HBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.CargarReciboController">
    <children>
-      <VBox prefHeight="437.0" prefWidth="198.0">
+      <VBox prefHeight="437.0" prefWidth="342.0">
          <children>
-            <Label text="cargarRecibo" />
+            <Label text="cargarRecibo">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font></Label>
             <GridPane>
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -49,11 +53,14 @@
                   <Spinner fx:id="txt_IVA" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                   <Spinner fx:id="txt_subtotal" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
             </GridPane>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="318.0">
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="318.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#cerrar" text="cerrar" />
-                  <Button mnemonicParsing="false" onAction="#cargarRecibo" text="cargar" />
+                  <Button mnemonicParsing="false" onAction="#cerrar" prefHeight="41.0" prefWidth="85.0" style="-fx-background-color: #f7dcda;" text="cerrar" />
+                  <Button mnemonicParsing="false" onAction="#cargarRecibo" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #f5e7a4;" text="cargar" />
                </children>
             </HBox>
          </children>
@@ -61,14 +68,14 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </VBox>
-      <VBox prefHeight="437.0" prefWidth="298.0">
+      <VBox prefHeight="437.0" prefWidth="344.0">
          <children>
-            <TableView fx:id="tb_tableview" prefHeight="257.0" prefWidth="301.0">
+            <TableView fx:id="tb_tableview" prefHeight="329.0" prefWidth="344.0">
               <columns>
-                <TableColumn fx:id="tc_monto" prefWidth="58.3333740234375" text="monto" />
-                <TableColumn fx:id="tc_descripcion" prefWidth="111.0" text="descripcion" />
-                  <TableColumn fx:id="tc_tipo" prefWidth="69.0" text="tipo" />
-                  <TableColumn fx:id="tc_subtotal" prefWidth="64.3333740234375" text="subtotal" />
+                <TableColumn fx:id="tc_monto" prefWidth="63.66668701171875" text="monto" />
+                <TableColumn fx:id="tc_descripcion" prefWidth="133.0" text="descripcion" />
+                  <TableColumn fx:id="tc_tipo" text="tipo" />
+                  <TableColumn fx:id="tc_subtotal" prefWidth="67.0" text="subtotal" />
               </columns>
             </TableView>
          </children>

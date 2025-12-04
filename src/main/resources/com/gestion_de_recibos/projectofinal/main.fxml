@@ -3,14 +3,29 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" prefHeight="493.0" prefWidth="366.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.MainController">
+<VBox alignment="CENTER" prefHeight="305.0" prefWidth="366.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.MainController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
    <children>
-      <Button mnemonicParsing="false" onAction="#verRecibos" text="ver recibos" />
-      <Button fx:id="btn_cargarrecibo" mnemonicParsing="false" onAction="#cargarrecibo" text="cargar recibo" />
-      <Button mnemonicParsing="false" onAction="#cerrarSesion" text="Cerrar sesion" />
+      <Label prefHeight="45.0" prefWidth="255.0" text="Gestor de Recibos">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#verRecibos" prefHeight="43.0" prefWidth="136.0" style="-fx-background-color: #f5e7a4;" text="ver recibos">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button fx:id="btn_cargarrecibo" mnemonicParsing="false" onAction="#cargarrecibo" prefHeight="45.0" prefWidth="136.0" style="-fx-background-color: #f5e7a4;" text="cargar recibo">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
+      <Button mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="50.0" prefWidth="137.0" style="-fx-background-color: #f5e7a4;" text="Cerrar sesion">
+         <font>
+            <Font size="17.0" />
+         </font></Button>
    </children>
 </VBox>
