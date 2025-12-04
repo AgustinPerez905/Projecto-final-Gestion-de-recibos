@@ -2,13 +2,15 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="tb_recibos" prefHeight="475.0" prefWidth="873.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestion_de_recibos.projectofinal.VerRecibosController">
    <children>
-      <Button fx:id="btn_cerrar" layoutX="707.0" layoutY="402.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="76.0" text="cerrar" />
-      <Button fx:id="btn_modificarRecibo" layoutX="337.0" layoutY="335.0" mnemonicParsing="false" text="modificar recibo" />
-      <Label layoutX="242.0" layoutY="14.0" text="ver recibos" />
-      <TableView fx:id="tb_tableview" layoutX="6.0" layoutY="36.0" prefHeight="294.0" prefWidth="819.0">
+      <Label layoutX="387.0" layoutY="14.0" text="Recibos">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <TableView fx:id="tb_tableview" editable="true" layoutX="6.0" layoutY="36.0" onMouseClicked="#habilitarbotones" prefHeight="294.0" prefWidth="819.0">
         <columns>
           <TableColumn fx:id="tc_monto" text="monto" />
           <TableColumn fx:id="tc_descripcion" prefWidth="130.0" text="descripcion" />
@@ -22,5 +24,12 @@
             <TableColumn fx:id="tc_debitoTarjeta" prefWidth="95.0" text="debito tarjeta" />
         </columns>
       </TableView>
+      <HBox layoutX="307.0" layoutY="337.0">
+         <children>
+            <Button fx:id="btn_modificarRecibo" disable="true" mnemonicParsing="false" onAction="#modificarRecibo" text="modificar recibo" />
+            <Button fx:id="btn_borrarRecibo" disable="true" mnemonicParsing="false" onAction="#borrarRecibo" prefHeight="25.0" prefWidth="115.0" text="borrar recibo" />
+         </children>
+      </HBox>
+      <Button fx:id="btn_cerrar" layoutX="707.0" layoutY="402.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="45.0" prefWidth="76.0" text="cerrar" />
    </children>
 </AnchorPane>
